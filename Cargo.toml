@@ -1,0 +1,17 @@
+[package]
+name = "tomcat-manager-cli"
+version = "0.1.0"
+edition = "2024"
+description = "A CLI for the Apache Tomcat Manager API"
+ 
+[[bin]]
+name = "tomcat"
+path = "src/main.rs"
+ 
+[dependencies]
+clap    = { version = "4", features = ["derive", "env"] }
+reqwest = { version = "0.11", features = ["blocking"] }
+anyhow  = "1"
+colored = "2"
+tabled  = "0.14"
+ 
